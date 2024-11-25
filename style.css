@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+width:130px;
+height: 80px;
+margin-right: auto;
+align-items: auto;
+  font-size: 14px;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgb(177, 202, 225);
+    color: rgb(0, 0, 0);
+}
+
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f4ac03, #49fbe9); /* Green gradient background */
+    color: white;
+    overflow: hidden; /* Ensures smooth animation without overflow */
+    position: relative;
+}
+
+/* Animated Heading */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-in-out; /* Slide-in animation */
+    opacity: 0; /* Initially hidden */
+    animation-fill-mode: forwards; /* Ensures the animation stays visible */
+}
+
+/* Highlight Styling */
+.highlight {
+    color: #7aa406; /* Golden text for highlight */
+    font-weight: bold;
+}
+
+/* Animated Paragraph */
+header .welcome-text {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in 1.5s; /* Fade-in with delay */
+    animation-fill-mode: forwards; /* Ensures visibility after animation */
+}
+
+/* Keyframes for Slide-In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1;
+    }
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Fully transparent */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Prevent overflow during animation */
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation on load */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for the Image */
+.image-container img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Fade-In Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Slight upward position */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    padding: 15px 20px;
+    background-color: #0cb1e8;
+    color: rgb(250, 244, 244);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #ebd10e;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.subject-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+    gap: 20px; /* Space between buttons */
+}
+
+.subject-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fad901, #d9ce03); /* Green gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.subject-btn:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #3b6f73, #1B5E20); /* Darker green on hover */
+}
+
+.subject-btn:active {
+    transform: scale(0.95); /* Slight shrink on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
+.result-container button {
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.result-container button:hover {
+    background-color: #45a049;
+}
+
+p{
+    margin:20px;
+    color:#000000;
+}
+footer{
+     margin-top: 0px;
+    padding-top: 150px;
+  padding-bottom: 0px;
+  font-size: 15px;
+  text-align: center;
+ 
+}
